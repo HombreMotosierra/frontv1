@@ -46,5 +46,7 @@ export class UsuarioService {
         return this.http.get<Usuario[]>(`${this.apiUrl}`);
     }
 
-
+    registerUsuario(usuario: Usuario): Observable<Usuario> {
+        return this.http.post<Usuario>(`${this.apiUrl}`, usuario);
+    }
 }
