@@ -49,4 +49,9 @@ export class UsuarioService {
     registerUsuario(usuario: Usuario): Observable<Usuario> {
         return this.http.post<Usuario>(`${this.apiUrl}`, usuario);
     }
+
+    deleteUsuario(cedula: string): Observable<Usuario> {
+        return this.http.delete<Usuario>(`${this.apiUrl}/${cedula}`);
+    }
+
 }

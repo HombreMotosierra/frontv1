@@ -25,4 +25,19 @@ export class ListaUsuarioComponent implements OnInit {
       },
     });
   }
+
+  eliminarUsuario(cedula: string): void {
+    this.usuarioService.deleteUsuario(cedula).subscribe({
+      next: () => {
+        this.obtenerUsuarios(); // Actualiza la lista después de eliminar un usuario
+      },
+      error: (error) => {
+        console.error('Error al eliminar el usuario:', error);
+      },
+    });
+  }
+
+  // Método para editar el usuario
+  
+
 }

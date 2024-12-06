@@ -20,9 +20,13 @@
                 <td>{{ usuario.empresa.nombre }}</td>
                 <td>{{ usuario.rol.rol}}</td>
                 <td>{{usuario.estado}}</td>
-
+<td>
+                    <!-- <button class="btn btn-primary" (click)="editarUsuario(usuario)">Editar</button> -->
+                    <button class="btn btn-danger" (click)="eliminarUsuario(usuario.cedula)">Eliminar</button>
+</td>
             </tr>
         </tbody>
+
     </table>
 </div>
 <ng-template #noUsuarios>
