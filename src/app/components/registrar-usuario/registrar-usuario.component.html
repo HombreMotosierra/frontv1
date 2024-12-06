@@ -1,86 +1,49 @@
 <div class="col-md-6 offset-md-3">
   <h3 class="text-center">Registro de usuarios</h3>
-  <form (ngSubmit)="onSubmit()" >
+  <form (ngSubmit)="onSubmit()">
 
     <div class="form-group">
-      <input type = "text"
-             class="form-control"
-             id = "cedula"
-             [(ngModel)]="usuario.cedula" )]
-             name = "cedula"
-      >
+      <label for="cedula">Cedula</label>
+      <input type="text" class="form-control" id="cedula" [(ngModel)]="usuario.cedula" name="cedula">
     </div>
     <div class="form-group">
-    <input type = "text"
-    class="form-control"
-    id = "primerNombre"
-    [(ngModel)]="usuario.primerNombre" )]
-    name = "primerNombre"
-    >
-  </div>
-    <div class="form-group">
-      <input type = "text"
-             class="form-control"
-             id = "segundoNombre"
-             [(ngModel)]="usuario.segundoNombre" )]
-             name = "segundoNombre"
-      >
+      <label for="primerNombre">Primer Nombre</label>
+      <input type="text" class="form-control" id="primerNombre" [(ngModel)]="usuario.primerNombre" name="primerNombre">
     </div>
     <div class="form-group">
-      <input type = "text"
-             class="form-control"
-             id = "primerApellido"
-             [(ngModel)]="usuario.primerApellido" )]
-             name = "primerApellido"
-      >
+      <label for="segundoNombre">Segundo Nombre</label>
+      <input type="text" class="form-control" id="segundoNombre" [(ngModel)]="usuario.segundoNombre"
+        name="segundoNombre">
     </div>
     <div class="form-group">
-      <input type = "text"
-             class="form-control"
-             id = "segundoApellido"
-             [(ngModel)]="usuario.segundoApellido" )]
-             name = "segundoApellido"
-      >
+      <label for="primerApellido">Primer Apellido</label>
+      <input type="text" class="form-control" id="primerApellido" [(ngModel)]="usuario.primerApellido"
+        name="primerApellido">
     </div>
     <div class="form-group">
-      <input type = "text"
-             class="form-control"
-             id = "clave"
-             [(ngModel)]="usuario.clave" )]
-             name = "clave"
-      >
+      <label for="segundoApellido">Segundo Apellido</label>
+      <input type="text" class="form-control" id="segundoApellido" [(ngModel)]="usuario.segundoApellido"
+        name="segundoApellido">
     </div>
     <div class="form-group">
-      <input type = "email"
-             class="form-control"
-             id = "email"
-             [(ngModel)]="usuario.email" )]
-             name = "email"
-      >
+      <label for="clave">Clave</label>
+      <input type="text" class="form-control" id="clave" [(ngModel)]="usuario.clave" name="clave">
     </div>
     <div class="form-group">
-      <input type = "text"
-             class="form-control"
-             id = "empresa"
-             [(ngModel)]="usuario.empresa" )]
-             name = "empresa"
-      >
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" [(ngModel)]="usuario.email" name="email">
     </div>
     <div class="form-group">
-      <input type = "number"
-             class="form-control"
-             id = "Rol"
-             [(ngModel)]="usuario.rol" )]
-             name = "rol"
-      >
+      <label for="empresa">Empresa</label>
+      <input type="text" class="form-control" id="empresa" [(ngModel)]="usuario.empresa" name="empresa">
     </div>
     <div class="form-group">
-      <input type = "number"
-             class="form-control"
-             id = "estado"
-             [(ngModel)]="usuario.estado" )]
-             name = "estado"
-      >
+      <label for="Rol">Rol</label>
+      <input type="number" class="form-control" id="Rol" [(ngModel)]="usuario.rol" name="rol">
+    </div>
+    <div class="form-group">
+      <label for="estado">Estado</label>
+      <input type="number" class="form-control" id="estado" [(ngModel)]="usuario.estado" name="estado">
     </div>
     <button class="btn btn-success">Guardar</button>
   </form>
