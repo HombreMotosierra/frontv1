@@ -1,0 +1,27 @@
+<div *ngIf="usuarios.length > 0; else noUsuarios">
+    <h2>Lista de Usuarios</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Cédula</th>
+                <th>Nombre Completo</th>
+                <th>Email</th>
+                <th>Empresa</th>
+                <th>Rol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuario of usuarios">
+                <td>{{ usuario.cedula }}</td>
+                <td>{{ usuario.primerNombre }} {{ usuario.segundoNombre }} {{ usuario.primerApellido }} {{
+                    usuario.segundoApellido }}</td>
+                <td>{{ usuario.email }}</td>
+                <td>{{ usuario.empresa.nombre }}</td>
+                <td>{{ usuario.rol.rol}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<ng-template #noUsuarios>
+    <p>No se encontraron usuarios.</p>
+</ng-template>
