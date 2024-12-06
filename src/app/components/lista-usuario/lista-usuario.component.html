@@ -9,6 +9,7 @@
                 <th>Empresa</th>
                 <th>Rol</th>
                 <th>Estado</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -21,8 +22,8 @@
                 <td>{{ usuario.rol.rol}}</td>
                 <td>{{usuario.estado}}</td>
 <td>
-                    <!-- <button class="btn btn-primary" (click)="editarUsuario(usuario)">Editar</button> -->
-                    <button class="btn btn-danger" (click)="eliminarUsuario(usuario.cedula)">Eliminar</button>
+                    <button class="btn btn-primary" (click)="actualizarUsuario(+usuario.cedula)">Editar</button>
+                    <button class="btn btn-danger" (click)="eliminarUsuario(usuario.cedula )">Eliminar</button>
 </td>
             </tr>
         </tbody>

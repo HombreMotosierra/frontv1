@@ -54,4 +54,8 @@ export class UsuarioService {
         return this.http.delete<Usuario>(`${this.apiUrl}/${cedula}`);
     }
 
+    // Método para actualizar usuario
+    actualizarUsuario(id: number, usuario: any): Observable<any> {
+        return this.http.put(`${this.apiUrl}/${id}`, usuario);
+    }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService, Usuario } from '../../services/usuario.service';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-usuario',
@@ -9,7 +10,7 @@ import { UsuarioService, Usuario } from '../../services/usuario.service';
 export class ListaUsuarioComponent implements OnInit {
   usuarios: Usuario[] = []; // Lista de usuarios
 
-  constructor(private usuarioService: UsuarioService) {}
+  constructor(private usuarioService: UsuarioService,private router: Router) {}
 
   ngOnInit(): void {
     this.obtenerUsuarios();
@@ -37,7 +38,10 @@ export class ListaUsuarioComponent implements OnInit {
     });
   }
 
-  // Método para editar el usuario
-  
+  // Método para actualizar un usuario
+  actualizarUsuario(id: number) {
+    this.router.navigate(["/actualizar-usuario", id]);
+  }
+
 
 }

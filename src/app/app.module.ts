@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ListaUsuarioComponent } from './components/lista-usuario/lista-usuario.component';
 import { RegistrarUsuarioComponent } from './components/registrar-usuario/registrar-usuario.component';
 import { FormsModule } from '@angular/forms';
+import { ActualizarUsuarioComponent } from './components/actualizar-usuario/actualizar-usuario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaUsuarioComponent,
-    RegistrarUsuarioComponent
+    RegistrarUsuarioComponent,
+    ActualizarUsuarioComponent
   ],
   imports: [
     BrowserModule,
