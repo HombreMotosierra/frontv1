@@ -16,7 +16,7 @@ export interface Rol {
     descripcion: string;
 }
 
-export interface Usuario {
+export class Usuario {
     cedula: string;
     primerNombre: string;
     segundoNombre: string;
@@ -45,4 +45,6 @@ export class UsuarioService {
     getUsuarios(): Observable<Usuario[]> {
         return this.http.get<Usuario[]>(`${this.apiUrl}`);
     }
+
+
 }

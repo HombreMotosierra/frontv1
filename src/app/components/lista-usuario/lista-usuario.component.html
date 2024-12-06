@@ -1,13 +1,14 @@
 <div *ngIf="usuarios.length > 0; else noUsuarios">
     <h2>Lista de Usuarios</h2>
-    <table>
-        <thead>
+    <table class="table table-striped">
+        <thead class="table-dark">
             <tr>
                 <th>Cédula</th>
                 <th>Nombre Completo</th>
                 <th>Email</th>
                 <th>Empresa</th>
                 <th>Rol</th>
+                <th>Estado</th>
             </tr>
         </thead>
         <tbody>
@@ -18,6 +19,8 @@
                 <td>{{ usuario.email }}</td>
                 <td>{{ usuario.empresa.nombre }}</td>
                 <td>{{ usuario.rol.rol}}</td>
+                <td>{{usuario.estado}}</td>
+
             </tr>
         </tbody>
     </table>

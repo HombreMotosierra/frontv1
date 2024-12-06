@@ -3,10 +3,10 @@ import { UsuarioService, Usuario } from '../../services/usuario.service';
 
 @Component({
   selector: 'app-usuario',
-  templateUrl: './usuario.component.html',
-  styleUrls: ['./usuario.component.css'],
+  templateUrl: './lista-usuario.component.html',
+  styleUrls: ['./lista-usuario.component.css'],
 })
-export class UsuarioComponent implements OnInit {
+export class ListaUsuarioComponent implements OnInit {
   usuarios: Usuario[] = []; // Lista de usuarios
 
   constructor(private usuarioService: UsuarioService) {}
